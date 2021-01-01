@@ -48,6 +48,21 @@ body * {
   z-index: 1;
 }
 
+.link:link {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  background-repeat: no-repeat;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 35px;
+  background-image: url(./favicon-96x96.png);
+  height: 35px;
+  background-position: center;
+  background-size: cover;
+  animation: scale 1s infinite linear;
+}
+
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 100px;
@@ -153,5 +168,17 @@ h1 small {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translate(-0%, -0%) scale(1);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-0%, -0%) scale(0.75);
   }
 }
